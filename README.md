@@ -59,6 +59,7 @@ We have two boards of different size and place a different number of mines on ea
 #### Why placing less bombs takes longer in the second case?
 The first case is the REDBOARD, which has 500000 more spaces than the BLUEBORARD. Whe we run to plant the bombs, in the REDBOARD we have more spaces to leave free, therefore the random function runs faster. In the other case, we are only leaving one space free, which makes it harder for the drandom function to place all the bombs.
 #### Knowing that usually there are going to be more bombs than spaces in the final boards, how would you change the method _minningTheBoard_ to be more efficient?
+Instead of placing the bombs I would fill all the board with bombs and create a function to take out bombs and create empty spaces, this would make it faster.
 
 **Strategy**: Understand well what the code does. Use conditionals breakpoints.
 
