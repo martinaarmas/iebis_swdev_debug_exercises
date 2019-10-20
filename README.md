@@ -68,4 +68,6 @@ Instead of placing the bombs I would fill all the board with bombs and create a 
 In this case this code looks really simple. When the "d" reaches the value 1.0, the program should end, but it never does.
 
 #### Why does not appear a message indicating that "d is 1"?
+Doubles work in Java in a different way. Using breakpoints errors accumulate in this program, it keeps adding decimals, therefore d is and will never be 1.0, so it can't print "d is 1".
+
 #### How will you fix it?
