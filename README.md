@@ -71,3 +71,19 @@ In this case this code looks really simple. When the "d" reaches the value 1.0, 
 Doubles work in Java in a different way. Using breakpoints errors accumulate in this program, it keeps adding decimals, therefore d is and will never be 1.0, so it can't print "d is 1".
 
 #### How will you fix it?
+  
+  
+  > public static void main(String [] args) {
+        BigDecimal a = new BigDecimal(0.0);
+        BigDecimal b = new BigDecimal(1.0);
+        BigDecimal c = new BigDecimal(0.1);
+
+   > while (a.compareTo(b) != 0) {
+            BigDecimal sum = a.add(c);
+            a = sum.setScale(2, RoundingMode.FLOOR);
+
+        }
+
+   > System.out.println("a is 1");
+    }
+}
