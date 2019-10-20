@@ -41,6 +41,7 @@ This is the solution:
 #### Why the method _countGroupsRepeatedCharacters_ returns 3 in one case when it should be 4?
 The loop starts in int i=1, so it does not check repeated characters in the first two characters of the word. We need to change the condition to i=0 so it checks the first chars
 >for (int i = 0; i < word.length() - 1; i++)
+
 When we run it, an exception is returned, we need to add a piece of code to tell the program what to do if the first 2 chars are not equal. So we add:
 > if (i != 0) {
            if (word.charAt(i - 1) != word.charAt(i)) // it't the start
