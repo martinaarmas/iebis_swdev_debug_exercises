@@ -33,6 +33,9 @@ This is the solution:
 
 >for (int i = pos + 1; i < word.length(); i++)
 #### Why the method _firstRepeatedCharacter_ is throwing an exception?
+The exception happens because a char or item outside the input (word) is being called
+
+ meaning that a item in a position outside of the array is being called. In this case, this occurs here:
 #### Why the method _countGroupsRepeatedCharacters_ returns 3 in one case when it should be 4?
 
 **Strategy**: Place breakpoints before the methods are executed, step into them and see what happens.
@@ -45,6 +48,7 @@ The boards can contain _Element_ objects, and since _Space_ and _Mine_ inherits 
 We have two boards of different size and place a different number of mines on each one. But in the second case it takes longer to place all the mines.
 
 #### Why placing less bombs takes longer in the second case?
+The first case is the REDBOARD, which has 500000 more spaces than the BLUEBORARD. Whe we run to plant the bombs, in the REDBOARD we have more spaces to leave free, therefore the random function runs faster. In the other case, we are only leaving one space free, which makes it harder for the drandom function to place all the bombs.
 #### Knowing that usually there are going to be more bombs than spaces in the final boards, how would you change the method _minningTheBoard_ to be more efficient?
 
 **Strategy**: Understand well what the code does. Use conditionals breakpoints.
