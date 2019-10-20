@@ -28,7 +28,6 @@ public class WordAnalyzer{
         {
             char ch = word.charAt(i);
             /**
-             * 2.
              * we need to add this line of code so when there are no repeated characters
              * the program knows what to do.
              * In this case print [] so the Exception is not sent.
@@ -66,10 +65,11 @@ public class WordAnalyzer{
 
     private int find(char c, int pos)
     {
-        //1.
-        // We need to add 1 to pos because if not the first letter or the char that is written
-        // in  if (find(ch, i) >= 0) first multiple character method is always going to be the value of pos.
-        for (int i = pos + 1; i < word.length(); i++)
+        /**
+         * We need add 1 to pos because it was giving as an output the first letter
+         * in  if (find(ch, i) >= 0) this method is always going to return the value of pos
+         * for (int i = pos + 1; i < word.length(); i++)*/
+         for (int i = pos + 1; i < word.length(); i++)
         {
             if (word.charAt(i) == c)
             {
@@ -86,14 +86,13 @@ public class WordAnalyzer{
      */
     public int countGroupsRepeatedCharacters() {
         int c = 0;
-        /** As the loop starts in int i=1 it does not check repeated characters in the first two chars
-         * Therefore we have to change the condition to i=0 so it checks the first chars/
-         */
+        /** The loop starts in int i=1, so it does not check repeated characters in the first two characters of the word
+         *  We need to change the condition to i=0 so it checks the first chars*/
 
         for (int i = 0; i < word.length() - 1; i++)
         /**
-         * Now, the program shows a thread Exception so we need to add an if
-         that tells the program what to do if the two first chars are not equal.
+         * When we run it, it returns a thread Exception so we need to add a condition that tells the program to continue
+         * if the two first characters are not equal.
          */
             if (word.charAt(i) == word.charAt(i + 1)) // found a repetition
             {
