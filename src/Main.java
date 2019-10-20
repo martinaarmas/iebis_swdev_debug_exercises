@@ -7,6 +7,7 @@ public class Main {
 
     public static final int RED_BOARD = 2000000;
     public static final int BLUE_BOARD = 1500000;
+
     static HashMap<Integer, Element> myBoard;
 
     public static void settingTheBoard(int size) {
