@@ -25,7 +25,7 @@ For some reason, the methods are not working properly, sometimes they return the
 
 #### Why the method _firstMultipleCharacter_ is returning "c" for the word _comprehensive_, when the correct answer should be "e"?
 The method _firstMultipleCharacter_ returns the value of the first char of the input, we add 1 to pos because it was happening in the code:
-*_if (find(ch, i) >= 0)_ 
+* _if (find(ch, i) >= 0)_ 
 this method is always going to return the value of pos
 
 This is the solution:
