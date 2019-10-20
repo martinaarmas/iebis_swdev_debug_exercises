@@ -71,6 +71,8 @@ In this case this code looks really simple. When the "d" reaches the value 1.0, 
 Doubles work in Java in a different way. Using breakpoints errors accumulate in this program, it keeps adding decimals, therefore d is and will never be 1.0, so it can't print "d is 1".
 
 #### How will you fix it?
+Java has a Math class called [BigDecimal](https://stackoverflow.com/questions/3413448/double-vs-bigdecimal), when we import it, is an exact way of representing numbers
+
     public static void main(String [] args) {
         BigDecimal a = new BigDecimal(0.0);
         BigDecimal b = new BigDecimal(1.0);
@@ -83,5 +85,4 @@ Doubles work in Java in a different way. Using breakpoints errors accumulate in 
         }
 
         System.out.println("a is 1");
-    }
-}
+    }}
