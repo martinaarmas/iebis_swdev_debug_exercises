@@ -74,8 +74,10 @@ Doubles work in Java in a different way. Using breakpoints errors accumulate in 
   
   
   > public static void main(String [] args) {
-        BigDecimal a = new BigDecimal(0.0);
-        BigDecimal b = new BigDecimal(1.0);
+  BigDecimal a = new BigDecimal(0.0);
+  BigDecimal b = new BigDecimal(1.0);
+        
+        
         BigDecimal c = new BigDecimal(0.1);
 
    > while (a.compareTo(b) != 0) {
