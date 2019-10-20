@@ -24,10 +24,10 @@ In this code there is a class called WordAnalyzer that contains several methods 
 For some reason, the methods are not working properly, sometimes they return the correct value and others don't. You need to answer the next questions.
 
 #### Why the method _firstMultipleCharacter_ is returning "c" for the word _comprehensive_, when the correct answer should be "e"?
-The method _firstMultipleCharacter_ returns the value of the first char of the input, we add 1 to pos because it was happening in the code:
-* _if (find(ch, i) >= 0)_ 
+The method _firstMultipleCharacter_ returns the value of the first char of the input, this is because i is equal to pos, so the first letter will always be the outcome of this function.
 
-this method is always going to return the value of pos
+We add 1 to pos in the loop, so it it will no longer return i
+
 
 This is the solution:
 
